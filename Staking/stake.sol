@@ -1,6 +1,6 @@
 // SPDX-License-Identifier: GPL-3.0-only
 
-pragma solidity 0.8.19;
+pragma solidity ^0.8.19;
 
 import "../@openzeppelin/contracts/security/Pausable.sol";
 import "../@openzeppelin/contracts/access/AccessControlEnumerable.sol";
@@ -16,7 +16,7 @@ interface Token {
 contract StakeESX is Pausable, AccessControlEnumerable,ReentrancyGuard {
     Token esxToken;
     struct Plan {
-        uint256 startWindowTS;
+        uint256 startWindowTS;  
         uint256 endWindowTS;
         uint256 minlockSeconds;
         uint256 expireSeconds;
